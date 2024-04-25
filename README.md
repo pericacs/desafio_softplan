@@ -45,3 +45,5 @@ No modulo, a pequisa principal é pelo CEP e sempre a pesquisa vai focar no CEP.
 Na pesquisa por Endereço, percebi que não possui no WS e por isso fiz a consulta apenas no banco de dados, seguindo todas as especificações do documento.
 Quando existir algum cep já cadastrado no banco de dados, e o cliente selecionar que deseja alterar, criei um mini formulario para alteração, assim facilita a experiência do cliente junto ao Módulo.
 O sistema funciona tanto para JSON quando para XML e o acesso a base de dados;
+
+# OBSERVAÇÃO :: Cheguei a desenvolver o componente, porem como apresentou alguns erros e o prazo de entrega era curto. Optei em entregar o sistema funcionando. 
