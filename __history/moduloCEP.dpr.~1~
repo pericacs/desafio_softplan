@@ -1,0 +1,16 @@
+program moduloCEP;
+
+uses
+  Vcl.Forms,
+  uFrmPrincipal in 'uFrmPrincipal.pas' {frmPrincipal},
+  uDmDatabase in 'uDmDatabase.pas' {dmDatabase: TDataModule};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TfrmPrincipal, frmPrincipal);
+  Application.CreateForm(TdmDatabase, dmDatabase);
+  Application.Run;
+end.

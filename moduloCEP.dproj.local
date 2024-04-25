@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2024/04/19 11:48:38.000.817,=C:\Users\Carlos Andre\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/04/19 11:52:38.000.979,=C:\Users\Carlos Andre\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2024/04/19 11:54:41.000.205,C:\Delphi\teste_softplan\uFrmPrincipal.pas=C:\Users\Carlos Andre\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/04/19 11:54:41.000.205,C:\Delphi\teste_softplan\uFrmPrincipal.dfm=C:\Users\Carlos Andre\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2024/04/19 11:54:56.000.712,C:\Delphi\teste_softplan\uDmDatabase.pas=C:\Users\Carlos Andre\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2024/04/19 11:54:56.000.712,C:\Delphi\teste_softplan\uDmDatabase.dfm=C:\Users\Carlos Andre\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit2.dfm</Transaction>
+    <Transaction>2024/04/19 11:55:11.000.874,C:\Delphi\teste_softplan\moduloCEP.dproj=C:\Users\Carlos Andre\OneDrive\Documentos\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2024/04/22 16:57:12.000.015,=C:\Delphi\Nova pasta\Unit1.pas</Transaction>
+    <Transaction>2024/04/22 16:58:54.000.748,C:\Delphi\Nova pasta\uDmDatabase.pas=</Transaction>
+    <Transaction>2024/04/22 16:59:12.000.198,C:\Delphi\Nova pasta\Unit1.pas=C:\Delphi\Nova pasta\FrameWork\uDmConexao.pas</Transaction>
+    <Transaction>2024/04/22 16:59:12.000.198,C:\Delphi\Nova pasta\Unit1.dfm=C:\Delphi\Nova pasta\FrameWork\uDmConexao.dfm</Transaction>
+  </Transactions>
+</BorlandProject>

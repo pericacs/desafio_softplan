@@ -1,0 +1,131 @@
+unit uDmConexao;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, ZAbstractConnection, ZConnection, Data.DB,
+  ZAbstractRODataset, ZAbstractDataset, ZDataset, Datasnap.Provider,
+  Datasnap.DBClient, Dialogs;
+
+type
+  TdmConexao = class(TDataModule)
+    zConexao: TZConnection;
+    dsCep: TDataSource;
+    cdsCep: TClientDataSet;
+    dspCep: TDataSetProvider;
+    qyCepInserir: TZQuery;
+    qyCepAtualizar: TZQuery;
+    qyCepConsultar: TZQuery;
+    qyCepConsultarid_cep: TZIntegerField;
+    qyCepConsultarnu_cep: TZRawStringField;
+    qyCepConsultards_logradouro: TZRawStringField;
+    qyCepConsultards_complemento: TZRawStringField;
+    qyCepConsultards_bairro: TZRawStringField;
+    qyCepConsultards_localidade: TZRawStringField;
+    qyCepConsultards_uf: TZRawStringField;
+    qyCepConsultartp_situacao: TZRawStringField;
+    cdsCepid_cep: TIntegerField;
+    cdsCepnu_cep: TStringField;
+    cdsCepds_logradouro: TStringField;
+    cdsCepds_complemento: TStringField;
+    cdsCepds_bairro: TStringField;
+    cdsCepds_localidade: TStringField;
+    cdsCepds_uf: TStringField;
+    cdsCeptp_situacao: TStringField;
+    qyCepApagar: TZQuery;
+    procedure inserirCep(nu_cep, ds_logradouro, ds_complemento, ds_bairro, ds_localidade, ds_uf: String);
+    procedure atualizarCep(nu_cep, ds_logradouro, ds_complemento, ds_bairro, ds_localidade, ds_uf, tp_situacao, updated_at: String; id_cep: Integer);
+    procedure deletarCep(created_at, deleted_at: String; id_cep: Integer);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+
+  end;
+
+var
+  dmConexao: TdmConexao;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+{$R *.dfm}
+
+{ TdmConexao }
+
+procedure TdmConexao.atualizarCep(nu_cep, ds_logradouro, ds_complemento,
+  ds_bairro, ds_localidade, ds_uf, tp_situacao, updated_at: String;
+  id_cep: Integer);
+begin
+  try
+    zConexao.StartTransaction;
+    qyCepInserir.Close;
+    with qyCepAtualizar do
+    begin
+       ParamByName('nu_cep').AsString := nu_cep;
+       ParamByName('ds_logradouro').AsString := ds_logradouro;
+       ParamByName('ds_complemento').AsString := ds_complemento;
+       ParamByName('ds_bairro').AsString := ds_bairro;
+       ParamByName('ds_localidade').AsString := ds_localidade;
+       ParamByName('ds_uf').AsString := ds_uf;
+       ParamByName('tp_situacao').AsString := tp_situacao;
+       ParamByName('updated_at').AsDate := Now;
+       ParamByName('id_cep').AsInteger := id_cep;
+    end;
+    qyCepInserir.ExecSQL;
+    zConexao.Commit;
+  except
+    zConexao.Commit;
+    ShowMessage('Houve um erro ao atualizar o CEP!');
+  end;
+end;
+
+procedure TdmConexao.deletarCep(created_at, deleted_at: String;
+  id_cep: Integer);
+begin
+  try
+    zConexao.StartTransaction;
+    qyCepInserir.Close;
+    with qyCepInserir do
+    begin
+       ParamByName('id_cep').AsInteger := id_cep;
+       ParamByName('tp_situacao').AsString := 'E';
+       ParamByName('updated_at').AsDate := Now;
+       ParamByName('deleted_at').AsDate := Now;
+    end;
+    qyCepInserir.ExecSQL;
+    zConexao.Commit;
+  except
+    zConexao.Commit;
+    ShowMessage('Houve um erro ao cadastrar o CEP!');
+  end;
+end;
+
+procedure TdmConexao.inserirCep(nu_cep, ds_logradouro, ds_complemento,
+  ds_bairro, ds_localidade, ds_uf: String);
+begin
+ // try
+    zConexao.StartTransaction;
+    qyCepInserir.Close;
+    with qyCepInserir do
+    begin
+       ParamByName('nu_cep').AsString := trim(nu_cep);
+       ParamByName('ds_logradouro').AsString := trim(ds_logradouro);
+       ParamByName('ds_complemento').AsString := ds_complemento;
+       ParamByName('ds_bairro').AsString := ds_bairro;
+       ParamByName('ds_localidade').AsString := ds_localidade;
+       ParamByName('ds_uf').AsString := ds_uf;
+       ParamByName('tp_situacao').AsString := 'A';
+       ParamByName('created_at').AsDate := Now;
+       ParamByName('updated_at').AsDate := Now;
+    end;
+    qyCepInserir.ExecSQL;
+    zConexao.Commit;
+ // except
+ //   zConexao.Rollback;
+ //   ShowMessage('Houve um erro ao cadastrar o CEP!');
+//  end;
+end;
+
+end.
