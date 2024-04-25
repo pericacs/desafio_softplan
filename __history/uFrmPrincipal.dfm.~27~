@@ -550,7 +550,6 @@ object frmPrincipal: TfrmPrincipal
         Width = 97
         Height = 22
         Caption = 'Cancelar'
-        OnClick = btnCancelarClick
       end
       object edtCep: TEdit
         Left = 18

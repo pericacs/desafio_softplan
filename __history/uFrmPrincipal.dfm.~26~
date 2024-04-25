@@ -4,7 +4,7 @@ object frmPrincipal: TfrmPrincipal
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'frmPrincipal'
-  ClientHeight = 693
+  ClientHeight = 748
   ClientWidth = 1157
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -18,9 +18,9 @@ object frmPrincipal: TfrmPrincipal
   TextHeight = 13
   object DBGrid1: TDBGrid
     Left = 313
-    Top = 189
+    Top = 305
     Width = 844
-    Height = 463
+    Height = 402
     Align = alClient
     DataSource = dmConexao.dsCep
     Font.Charset = DEFAULT_CHARSET
@@ -99,7 +99,6 @@ object frmPrincipal: TfrmPrincipal
     Height = 57
     Align = alTop
     TabOrder = 1
-    ExplicitWidth = 1147
     object Label1: TLabel
       Left = 16
       Top = 11
@@ -118,37 +117,217 @@ object frmPrincipal: TfrmPrincipal
     Left = 0
     Top = 57
     Width = 1157
-    Height = 132
+    Height = 248
     Align = alTop
     TabOrder = 2
-    ExplicitWidth = 1147
-    object btnPesquisar: TcxButton
-      Left = 806
-      Top = 38
-      Width = 163
-      Height = 47
+    object btnPesquisar: TSpeedButton
+      Left = 959
+      Top = 111
+      Width = 154
+      Height = 41
       Caption = 'Pesquisar'
-      LookAndFeel.Kind = lfFlat
-      LookAndFeel.NativeStyle = False
-      OptionsImage.ImageIndex = 9
-      OptionsImage.Images = ImgPequenas
-      TabOrder = 0
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = 30
+      Font.Height = 25
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
       OnClick = btnPesquisarClick
     end
-    object pnlJSONXML: TPanel
-      Left = 505
+    object Panel2: TPanel
+      Left = 1
       Top = 1
-      Width = 280
-      Height = 130
+      Width = 672
+      Height = 246
       Align = alLeft
       BevelOuter = bvNone
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = 15
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
       TabOrder = 1
+      object Label2: TLabel
+        Left = 15
+        Top = 17
+        Width = 160
+        Height = 24
+        Caption = 'Pesquisar por CEP'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clHotLight
+        Font.Height = -20
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ParentFont = False
+      end
+      object Label11: TLabel
+        Left = 15
+        Top = 126
+        Width = 299
+        Height = 24
+        Caption = 'Pesquisar por Endere'#231'o Completo'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clHotLight
+        Font.Height = -20
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ParentFont = False
+      end
+      object Label12: TLabel
+        Left = 13
+        Top = 222
+        Width = 221
+        Height = 13
+        Caption = 'Permitido pesquisar por : UF/Cidade/Endere'#231'o'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = 10485760
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ParentFont = False
+      end
+      object Label13: TLabel
+        Left = 15
+        Top = 92
+        Width = 165
+        Height = 13
+        Caption = 'Permitido cep com ou sem hifen (-)'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = 10485760
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ParentFont = False
+      end
+      object Label14: TLabel
+        Left = 18
+        Top = 165
+        Width = 14
+        Height = 13
+        Caption = 'UF'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clGray
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object Label15: TLabel
+        Left = 133
+        Top = 165
+        Width = 38
+        Height = 13
+        Caption = 'Cidade'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clGray
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object Label16: TLabel
+        Left = 328
+        Top = 165
+        Width = 65
+        Height = 13
+        Caption = 'Logradouro'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clGray
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object txtPesquisaCep: TEdit
+        Left = 15
+        Top = 53
+        Width = 449
+        Height = 32
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = 24
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 0
+      end
+      object txtPesquisaEndereco: TEdit
+        Left = 328
+        Top = 184
+        Width = 319
+        Height = 32
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = 24
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 1
+      end
+      object txtCidade: TEdit
+        Left = 133
+        Top = 184
+        Width = 189
+        Height = 32
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = 24
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 2
+      end
+      object cbUf: TComboBox
+        Left = 13
+        Top = 184
+        Width = 114
+        Height = 32
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -20
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 3
+        Items.Strings = (
+          'AC'
+          'AL'
+          'AM'
+          'AP'
+          'BA'
+          'CE'
+          'DF'
+          'ES'
+          'GO'
+          'MA'
+          'MG'
+          'MS'
+          'MT'
+          'PA'
+          'PB'
+          'PE'
+          'PI'
+          'PR'
+          'RJ'
+          'RN'
+          'RO'
+          'RR'
+          'RS'
+          'SC'
+          'SE'
+          'SP'
+          'TO')
+      end
+    end
+    object pnlJSONXML: TPanel
+      Left = 673
+      Top = 1
+      Width = 280
+      Height = 246
+      Align = alLeft
+      BevelOuter = bvNone
+      TabOrder = 0
       object Label3: TLabel
         Left = 15
         Top = 19
@@ -163,9 +342,9 @@ object frmPrincipal: TfrmPrincipal
         ParentFont = False
       end
       object rbXml: TRadioButton
-        Left = 150
-        Top = 46
-        Width = 106
+        Left = 118
+        Top = 104
+        Width = 83
         Height = 47
         Caption = 'XML'
         Font.Charset = DEFAULT_CHARSET
@@ -176,74 +355,36 @@ object frmPrincipal: TfrmPrincipal
         ParentFont = False
         TabOrder = 0
       end
-    end
-    object Panel2: TPanel
-      Left = 1
-      Top = 1
-      Width = 504
-      Height = 130
-      Align = alLeft
-      BevelOuter = bvNone
-      TabOrder = 2
-      object Label2: TLabel
-        Left = 15
-        Top = 19
-        Width = 133
-        Height = 25
-        Caption = 'Pesquisar CEP'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clHotLight
-        Font.Height = 25
-        Font.Name = 'Tahoma'
-        Font.Style = []
-        ParentFont = False
-      end
-      object txtPesquisa: TEdit
-        Left = 15
-        Top = 50
-        Width = 449
-        Height = 38
+      object rbJson: TRadioButton
+        Left = 14
+        Top = 107
+        Width = 83
+        Height = 41
+        Caption = 'JSON'
+        Checked = True
+        DoubleBuffered = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = 30
         Font.Name = 'Tahoma'
         Font.Style = []
+        ParentDoubleBuffered = False
         ParentFont = False
-        TabOrder = 0
+        TabOrder = 1
+        TabStop = True
       end
     end
   end
-  object rbJson: TRadioButton
-    Left = 520
-    Top = 108
-    Width = 129
-    Height = 41
-    Caption = 'JSON'
-    Checked = True
-    DoubleBuffered = False
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = 30
-    Font.Name = 'Tahoma'
-    Font.Style = []
-    ParentDoubleBuffered = False
-    ParentFont = False
-    TabOrder = 3
-    TabStop = True
-  end
   object pnlFooter: TPanel
     Left = 0
-    Top = 652
+    Top = 707
     Width = 1157
     Height = 41
     Align = alBottom
-    TabOrder = 4
-    ExplicitLeft = 104
-    ExplicitTop = 576
-    ExplicitWidth = 185
+    TabOrder = 3
     object cxButton2: TcxButton
       Left = 1050
-      Top = 8
+      Top = 6
       Width = 89
       Height = 25
       Caption = 'Fechar'
@@ -257,9 +398,9 @@ object frmPrincipal: TfrmPrincipal
   end
   object pnlCadastro: TPanel
     Left = 0
-    Top = 189
+    Top = 305
     Width = 313
-    Height = 463
+    Height = 402
     Margins.Left = 10
     Margins.Top = 10
     Margins.Right = 10
@@ -271,27 +412,20 @@ object frmPrincipal: TfrmPrincipal
     Padding.Right = 10
     Padding.Bottom = 10
     ParentBackground = False
-    TabOrder = 5
+    TabOrder = 4
     Visible = False
-    ExplicitLeft = 72
-    ExplicitTop = 365
-    ExplicitHeight = 453
     object Panel4: TPanel
       Left = 11
       Top = 11
       Width = 291
-      Height = 441
+      Height = 380
       Align = alClient
       Color = 16119285
       ParentBackground = False
       TabOrder = 0
-      ExplicitLeft = 56
-      ExplicitTop = 185
-      ExplicitWidth = 185
-      ExplicitHeight = 41
       object lblIdCep: TLabel
         Left = 18
-        Top = 61
+        Top = 29
         Width = 10
         Height = 20
         Caption = '0'
@@ -304,7 +438,7 @@ object frmPrincipal: TfrmPrincipal
       end
       object Label4: TLabel
         Left = 18
-        Top = 93
+        Top = 53
         Width = 20
         Height = 13
         Caption = 'CEP'
@@ -317,7 +451,7 @@ object frmPrincipal: TfrmPrincipal
       end
       object Label5: TLabel
         Left = 18
-        Top = 144
+        Top = 97
         Width = 65
         Height = 13
         Caption = 'Logradouro'
@@ -330,7 +464,7 @@ object frmPrincipal: TfrmPrincipal
       end
       object Label6: TLabel
         Left = 18
-        Top = 190
+        Top = 142
         Width = 79
         Height = 13
         Caption = 'Complemento'
@@ -343,7 +477,7 @@ object frmPrincipal: TfrmPrincipal
       end
       object Label7: TLabel
         Left = 18
-        Top = 236
+        Top = 188
         Width = 34
         Height = 13
         Caption = 'Bairro'
@@ -356,7 +490,7 @@ object frmPrincipal: TfrmPrincipal
       end
       object Label8: TLabel
         Left = 18
-        Top = 282
+        Top = 234
         Width = 60
         Height = 13
         Caption = 'Localidade'
@@ -369,7 +503,7 @@ object frmPrincipal: TfrmPrincipal
       end
       object Label9: TLabel
         Left = 18
-        Top = 327
+        Top = 279
         Width = 14
         Height = 13
         Caption = 'UF'
@@ -382,7 +516,7 @@ object frmPrincipal: TfrmPrincipal
       end
       object Label10: TLabel
         Left = 83
-        Top = 328
+        Top = 280
         Width = 49
         Height = 13
         Caption = 'Situa'#231#227'o'
@@ -394,79 +528,94 @@ object frmPrincipal: TfrmPrincipal
         ParentFont = False
       end
       object lblCadastroCep: TLabel
-        Left = 23
-        Top = 27
-        Width = 208
-        Height = 25
+        Left = 18
+        Top = 11
+        Width = 157
+        Height = 19
         Caption = 'Inserir / Atualizar CEP'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clHotLight
-        Font.Height = 25
+        Font.Height = -16
         Font.Name = 'Tahoma'
         Font.Style = []
         ParentFont = False
       end
+      object btnSalvar: TSpeedButton
+        Left = 35
+        Top = 336
+        Width = 97
+        Height = 22
+        Caption = 'Salvar'
+        OnClick = btnSalvarClick
+      end
+      object SpeedButton1: TSpeedButton
+        Left = 170
+        Top = 306
+        Width = 97
+        Height = 22
+        Caption = 'Salvar'
+      end
       object edtCep: TEdit
         Left = 18
-        Top = 112
+        Top = 72
         Width = 249
         Height = 21
         TabOrder = 0
       end
       object edtLogradouro: TEdit
         Left = 18
-        Top = 163
+        Top = 116
         Width = 249
         Height = 21
         TabOrder = 1
       end
       object edtComplemento: TEdit
         Left = 18
-        Top = 209
+        Top = 161
         Width = 249
         Height = 21
         TabOrder = 2
       end
       object rbInativo: TRadioButton
         Left = 144
-        Top = 348
+        Top = 300
         Width = 50
         Height = 17
         Caption = 'Inativo'
-        TabOrder = 3
+        TabOrder = 7
       end
       object edtLocalidade: TEdit
         Left = 18
-        Top = 301
+        Top = 253
         Width = 249
         Height = 21
         TabOrder = 4
       end
       object rbAtivo: TRadioButton
         Left = 83
-        Top = 348
+        Top = 300
         Width = 50
         Height = 17
         Caption = 'Ativo'
-        TabOrder = 5
+        TabOrder = 6
       end
       object edtBairro: TEdit
         Left = 18
-        Top = 255
+        Top = 207
         Width = 249
         Height = 21
-        TabOrder = 6
+        TabOrder = 3
       end
       object edtUf: TEdit
         Left = 18
-        Top = 346
+        Top = 298
         Width = 49
         Height = 21
-        TabOrder = 7
+        TabOrder = 5
       end
       object btnCancelar: TcxButton
         Left = 144
-        Top = 390
+        Top = 334
         Width = 89
         Height = 25
         Caption = 'Cancelar'
@@ -474,17 +623,6 @@ object frmPrincipal: TfrmPrincipal
         OptionsImage.Images = ImgPequenas
         TabOrder = 8
         OnClick = btnCancelarClick
-      end
-      object btnSalvar: TcxButton
-        Left = 49
-        Top = 390
-        Width = 89
-        Height = 25
-        Caption = 'Salvar'
-        OptionsImage.ImageIndex = 0
-        OptionsImage.Images = ImgPequenas
-        TabOrder = 9
-        OnClick = btnSalvarClick
       end
     end
   end
